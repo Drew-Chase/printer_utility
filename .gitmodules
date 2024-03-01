@@ -1,0 +1,3 @@
+[submodule "vendors/cclip"]
+	path = vendors/cclip
+	url = https://github.com/Drew-Chase/cclip.git
