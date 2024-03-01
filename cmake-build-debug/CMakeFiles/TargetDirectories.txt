@@ -1,3 +1,0 @@
-C:/Workspaces/C++/print_utility/cmake-build-debug/CMakeFiles/print_utility.dir
-C:/Workspaces/C++/print_utility/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Workspaces/C++/print_utility/cmake-build-debug/CMakeFiles/rebuild_cache.dir
