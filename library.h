@@ -1,6 +1,0 @@
-#ifndef PRINT_UTILITY_LIBRARY_H
-#define PRINT_UTILITY_LIBRARY_H
-
-void hello();
-
-#endif //PRINT_UTILITY_LIBRARY_H
