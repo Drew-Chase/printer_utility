@@ -8,11 +8,11 @@
 
 int main(int argc, char **argv)
 {
-    printf("Hello World");
-
     cclip::options_manager manager("Printer Utility");
     manager.add_option("h", "help", "Prints this help message", false, false);
-    manager.add_option("o", "output", "How should the data be outputted. Ex: JSON, PLAIN_TEXT, FILE, NONE", false, false);
+    manager.add_option("o", "output", "How should the data be outputted. Ex: JSON, PLAIN_TEXT, FILE, NONE (Default is NONE)", false, true);
+    manager.add_option("f", "file", "The file to output to", false, true);
+    manager.add_option("i", "input", "The input file/content", false, true);
 
 
     manager.parse(argc, argv);
