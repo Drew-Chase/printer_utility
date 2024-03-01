@@ -10,12 +10,19 @@ add_library(printer_utility STATIC
         includes/printers.h
         includes/printer.h
         includes/output_formats.h)
-target_include_directories(printer_utility PUBLIC ./includes)
+target_include_directories(printer_utility PUBLIC ${CMAKE_SOURCE_DIR}/includes)
 
 
 # Add the cli
-add_executable(cli cli/main.cpp)
-target_include_directories(cli PUBLIC ./includes)
+add_executable(cli
+        cli/main.cpp
+        ${CMAKE_SOURCE_DIR}/vendors/cclip/cclip/includes/options_manager.h
+    ${CMAKE_SOURCE_DIR}/vendors/cclip/cclip/src/options_manager.cpp)
+
+target_include_directories(cli PUBLIC ${CMAKE_SOURCE_DIR}/includes)
 target_link_libraries(cli printer_utility)
-target_include_directories(cli PUBLIC ./vendors/cclip/includes)
-target_link_libraries(cli cclip)
+
+
+# Link CCLIP library to the cli
+target_include_directories(cli PUBLIC ${CMAKE_SOURCE_DIR}/vendors/cclip/cclip/includes)
+
